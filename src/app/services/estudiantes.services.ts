@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EstudiantesServices {
-  private _baseUrl = 'https://localhost:7294';
+  private _baseUrl = 'https://localhost:7294/';
   private http = inject(HttpClient);
   constructor() {}
 
