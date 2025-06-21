@@ -2,18 +2,18 @@
 
 Frontend de la aplicación Estudiantes App, desarrollado en Angular 18 y Angular Material. Se conecta a la API `Estudiantes-API` para gestionar un listado de estudiantes con operaciones CRUD.
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - Angular 18
 - Angular Material
 - TypeScript
 - HTML / CSS
 
-## 🎯 Objetivo
+##  Objetivo
 
 Diseñar una interfaz moderna y funcional que consuma el backend de ASP.NET Core y permita interactuar con la lista de estudiantes.
 
-## 🧩 Funcionalidades
+##  Funcionalidades
 
 - Listar estudiantes
 - Ver detalles de un estudiante
@@ -24,7 +24,7 @@ Diseñar una interfaz moderna y funcional que consuma el backend de ASP.NET Core
 - Componente Spinner para carga
 - Toasts para mensajes de éxito o error (ngx-toastr)
 
-## 📁 Estructura principal
+##  Estructura principal
 
 - `/components`: componentes reutilizables como Spinner, Navbar, ConfirmDialog y Card del estudiante.
 - `/interfaces`: definición de las interfaces de los objetos que se manejan en la app (estudiantes, respuestas del backend).
