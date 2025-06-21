@@ -122,6 +122,7 @@ private editarEstudiante() {
       if (resp.isSuccess) {
         this._toast.success(resp.message, "Realizado");
         this.formEstudiante.reset();
+        console.log('Redirigiendo al home después de editar')
         this._route.navigate(['/home']);
       }
     }, (isError: HttpErrorResponse) => {
