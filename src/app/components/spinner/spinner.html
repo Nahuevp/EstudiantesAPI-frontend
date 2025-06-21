@@ -1,17 +1,7 @@
-<div class="text-center">
-  <button class="btn btn-primary" type="button" disabled>
-    <span
-      class="spinner-border spinner-border-lg"
-      role="status"
-      aria-hidden="true"
-    ></span>
-  </button>
-
-  <h3 class="text-center">
+<div style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <h4 style="margin-bottom: 1rem; color: #1976d2; font-weight: 500;">
     {{ mensaje().toUpperCase() }}
-  </h3>
+  </h4>
 
-  <mat-spinner class="mx-auto" />
+  <mat-spinner diameter="50" strokeWidth="4"></mat-spinner>
 </div>
-
- 

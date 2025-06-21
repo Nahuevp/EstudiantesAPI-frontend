@@ -1,1 +1,118 @@
-<p>upsert works!</p>
+<!-- Mostrar contenido cuando ya cargó -->
+<ng-container *ngIf="!isLoading; else cargando">
+  <div class="card card-border-primary">
+    <div class="card-header">
+      <h3 class="card-title text-center text-success">
+        Formulario para {{ titulo }}
+      </h3>
+    </div>
+
+    <div class="row col mx-auto mt-2">
+      <button class="btn btn-info" routerLink="/home">
+        Regresar Al Listado
+      </button>
+    </div>
+
+    <div class="card-body">
+      <form [formGroup]="formEstudiante" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="row">
+            <!-- Nombre -->
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Nombre del Estudiante</mat-label>
+                <input type="text" matInput formControlName="nombre" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('nombre')?.hasError('required') && formEstudiante.get('nombre')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+
+            <!-- Edad -->
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Edad del Estudiante</mat-label>
+                <input type="text" matInput formControlName="edad" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('edad')?.hasError('required') && formEstudiante.get('edad')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Género -->
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Género del Estudiante</mat-label>
+                <input type="text" matInput formControlName="genero" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('genero')?.hasError('required') && formEstudiante.get('genero')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+
+            <!-- Documento -->
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Documento del Estudiante</mat-label>
+                <input type="text" matInput formControlName="documento" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('documento')?.hasError('required') && formEstudiante.get('documento')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Teléfono -->
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Teléfono del Estudiante</mat-label>
+                <input type="text" matInput formControlName="telefono" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('telefono')?.hasError('required') && formEstudiante.get('telefono')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+
+            <!-- Correo -->
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Correo del Estudiante</mat-label>
+                <input type="email" matInput formControlName="correo" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('correo')?.hasError('required') && formEstudiante.get('correo')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+          </div>
+
+          <!-- Curso -->
+          <div class="row">
+            <div class="col">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Curso del Estudiante</mat-label>
+                <input type="text" matInput formControlName="curso" />
+              </mat-form-field>
+              <mat-error *ngIf="formEstudiante.get('curso')?.hasError('required') && formEstudiante.get('curso')?.touched">
+                El campo no es correcto o está vacío
+              </mat-error>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="d-grid gap-2 mt-3">
+          <button type="submit" mat-raised-button color="primary">
+            Guardar datos
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #cargando>
+  <app-spinner [mensaje]="'Cargando datos del estudiante'" />
+</ng-template>

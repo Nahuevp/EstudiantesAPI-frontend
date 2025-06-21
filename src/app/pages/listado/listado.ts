@@ -11,7 +11,7 @@ import { EstudiantesServices } from '../../services/estudiantes.services';
   Spinner,
   MatButtonModule,
   EstudianteCard,
-  RouterModule  
+  RouterModule,
   ],
   templateUrl: './listado.html',
   styleUrl: './listado.css'

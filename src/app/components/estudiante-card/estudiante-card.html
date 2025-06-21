@@ -8,8 +8,9 @@
   </div>
 
   <mat-card-content>
-    Curso
-    {{ estudiante()?.curso }}
+    <div class="mb-2">
+      Curso: {{ estudiante()?.curso }}
+    </div>
 
     <div class="row justify-content-center align-items-center g-2">
       <div class="col">Edad: {{ estudiante()?.edad }}</div>
@@ -19,8 +20,7 @@
     </div>
   </mat-card-content>
 
-  <mat-card-actions align="end" class="d-flex justify-content-around">
-    <!-- Botones para editar y ver detalles -->
+  <mat-card-actions align="end" class="d-flex justify-content-around mt-3">
     <button class="m-2" mat-flat-button color="accent" [routerLink]="['/editar/', estudiante()?.id]">
       <mat-icon>edit</mat-icon>
       Editar
@@ -31,14 +31,10 @@
     </button>
   </mat-card-actions>
 
-  <mat-card-footer>
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-
-    <div class="row mx-auto">
-      <button mat-flat-button color="warn" (click)="onDelete()">
-        <mat-icon color="basic">delete</mat-icon>
-        Eliminar
-      </button>
-    </div>
+  <mat-card-footer class="d-flex justify-content-center mt-3">
+    <button mat-flat-button color="warn" (click)="onDelete()">
+      <mat-icon>delete</mat-icon>
+      Eliminar
+    </button>
   </mat-card-footer>
 </mat-card>

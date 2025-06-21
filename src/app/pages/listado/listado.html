@@ -24,7 +24,10 @@
       <div class="row">
         @for (estudiante of estudiantes(); track estudiante.id) {
           <div class="col-4">
-            <app-estudiante-card [estudiante]="estudiante" />
+            <app-estudiante-card 
+            [estudiante]="estudiante" 
+            (wasRemove)="wasDelete($event)" 
+            />
           </div>
         }
       </div>
