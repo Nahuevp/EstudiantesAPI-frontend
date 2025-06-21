@@ -1,59 +1,30 @@
-# EstudiantesFrontend
+# estudiantes-frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
+Frontend de la aplicación Estudiantes App, desarrollado en Angular 18 y Angular Material. Se conecta a la API `Estudiantes-API` para gestionar un listado de estudiantes con operaciones CRUD.
 
-## Development server
+## Tecnologías utilizadas
 
-To start a local development server, run:
+- Angular 18
+- Angular Material
+- TypeScript
+- HTML / CSS
 
-```bash
-ng serve
-```
+##  Objetivo
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Diseñar una interfaz moderna y funcional que consuma el backend de ASP.NET Core y permita interactuar con la lista de estudiantes.
 
-## Code scaffolding
+##  Funcionalidades
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Listar estudiantes
+- Ver detalles de un estudiante
+- Agregar estudiante
+- Editar estudiante existente
+- Eliminar estudiante
+- Spinner de carga y notificaciones con Toastr
 
-```bash
-ng generate component component-name
-```
+##  Estructura principal
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `/components`: componentes reutilizables como Spinner, Navbar, ConfirmDialog y Card del estudiante.
+- `/interfaces`: definición de las interfaces de los objetos que se manejan en la app (estudiantes, respuestas del backend).
+- `/pages`: páginas principales: Home, Listado, Detalle, Upsert (crear/editar).
+- `/services`: servicios para la conexión HTTP con la API (usando `HttpClient` y `RxJS`).
