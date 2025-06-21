@@ -26,6 +26,7 @@ Diseñar una interfaz moderna y funcional que consuma el backend de ASP.NET Core
 
 ## 📁 Estructura principal
 
-- `/pages`: componentes por ruta (`home`, `detalle`, `upsert`)
-- `/components`: componentes reutilizables (`spinner`, `header`)
-- `/services`: conexión HTTP con el backend (`EstudiantesService`)
+- `/components`: componentes reutilizables como Spinner, Navbar, ConfirmDialog y Card del estudiante.
+- `/interfaces`: definición de las interfaces de los objetos que se manejan en la app (estudiantes, respuestas del backend).
+- `/pages`: páginas principales: Home, Listado, Detalle, Upsert (crear/editar).
+- `/services`: servicios para la conexión HTTP con la API (usando `HttpClient` y `RxJS`).
