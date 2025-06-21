@@ -20,9 +20,7 @@ Diseñar una interfaz moderna y funcional que consuma el backend de ASP.NET Core
 - Agregar estudiante
 - Editar estudiante existente
 - Eliminar estudiante
-- Validación de formularios con Reactive Forms
-- Componente Spinner para carga
-- Toasts para mensajes de éxito o error (ngx-toastr)
+- Spinner de carga y notificaciones con Toastr
 
 ##  Estructura principal
 
